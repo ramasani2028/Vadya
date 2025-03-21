@@ -1,0 +1,270 @@
+body, html {
+    overflow: hidden;
+}
+
+body {
+    background: url('piano.jpeg') no-repeat center;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    transition: background 0.5s ease-in-out;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    width: 100%;
+    background: transparent;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: color 0.3s ease-in-out;
+}
+
+nav:hover .logo {
+    color: cyan;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    white-space: nowrap;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+nav ul li a::after {
+    content: ""; 
+    position: absolute; left: 50%; bottom: 1px;
+    width: 0; height: 2px; background: red;
+     transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: 0.3s;
+}
+
+.input-group input:focus + label, 
+.input-group input:valid + label {
+    top: -10px;
+    font-size: 0.8rem;
+    color: cyan;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: linear-gradient(45deg, cyan, blue);
+    border: none;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: linear-gradient(45deg, blue, cyan);
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-login button {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.social-login button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.social-login img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.options a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.options a:hover {
+    color: cyan;
+}
+
+.create a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.create a:hover {
+    color: cyan;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-links a {
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-social-links a:hover {
+    color: cyan;
+    transform: scale(1.1);
+}
+
+.bg-toggle {
+    background: white;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.bg-toggle img {
+    width: 20px;
+    height: 20px;
+}
+
+.bg-toggle {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .login-container {
+        padding: 20px;
+    }
+}
