@@ -8,11 +8,11 @@
                 : '<i class="fa fa-play-circle fa-5x"></i>';
         }
 const songs = [
-    { title: 'Attention', artist: 'Charlie Puth', path: 'music/Charlie.mp3' },
-    { title: 'Faded', artist: 'Alan Walker', path: 'music/Faded.mp3' },
-    { title: 'Falling Down', artist: 'Lil Peep', path: 'music/fallingdown.mp3' },
-    { title: 'Rather Be', artist: 'Clean Bendit', path: 'music/Rather Be.mp3' },
-    { title: 'Stay', artist: 'Justin Bieber', path: 'music/stay.mp3' }
+    { title: 'Attention', artist: 'Charlie Puth', path: 'Charlie.mp3' },
+    { title: 'Faded', artist: 'Alan Walker', path: 'Faded.mp3' },
+    { title: 'Falling Down', artist: 'Lil Peep', path: 'fallingdown.mp3' },
+    { title: 'Rather Be', artist: 'Clean Bendit', path: 'Rather Be.mp3' },
+    { title: 'Stay', artist: 'Justin Bieber', path: 'stay.mp3' }
 ];
 
 let currentSongIndex = 0;
